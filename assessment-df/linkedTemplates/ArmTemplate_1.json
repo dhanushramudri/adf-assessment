@@ -221,7 +221,7 @@
 							},
 							"activities": [
 								{
-									"name": "Copy data2",
+									"name": "CP_TO_DB",
 									"type": "Copy",
 									"dependsOn": [],
 									"policy": {
@@ -302,8 +302,12 @@
 						"type": "Array",
 						"defaultValue": [
 							"Country.csv",
-							"Customer.xlsx",
-							"Product.csv"
+							"Product.csv",
+							"Day-1.csv",
+							"Day-2.csv",
+							"Day-3.csv",
+							"Day-4.csv",
+							"Day-5.csv"
 						]
 					}
 				},

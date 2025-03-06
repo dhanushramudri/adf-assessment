@@ -709,7 +709,6 @@
 							"value": "@dataset().asdfa",
 							"type": "Expression"
 						},
-						"folderPath": "ADF Assessment - March 2025",
 						"container": "assessment-container"
 					},
 					"columnDelimiter": ",",
