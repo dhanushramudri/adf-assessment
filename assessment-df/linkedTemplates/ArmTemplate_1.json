@@ -289,6 +289,36 @@
 											}
 										}
 									]
+								},
+								{
+									"name": "Stored procedure1",
+									"type": "SqlServerStoredProcedure",
+									"dependsOn": [
+										{
+											"activity": "CP_TO_DB",
+											"dependencyConditions": [
+												"Succeeded"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"storedProcedureName": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									},
+									"linkedServiceName": {
+										"referenceName": "LS_ASQL_FINAL",
+										"type": "LinkedServiceReference"
+									}
 								}
 							]
 						}
@@ -317,7 +347,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/pipeline1')]",
+			"name": "[concat(parameters('factoryName'), '/question2')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -367,6 +397,33 @@
 								"parameters": {}
 							}
 						]
+					},
+					{
+						"name": "Stored procedure1",
+						"type": "SqlServerStoredProcedure",
+						"dependsOn": [
+							{
+								"activity": "json to db",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"storedProcedureName": "[[dbo].[ProcessApiUsers2]"
+						},
+						"linkedServiceName": {
+							"referenceName": "LS_ASQL_FINAL",
+							"type": "LinkedServiceReference"
+						}
 					}
 				],
 				"policy": {
