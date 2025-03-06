@@ -31,6 +31,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'LS_ASQL_ASSESS_3'"
 		},
+		"LS_ASQL_FINAL_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_ASQL_FINAL'"
+		},
 		"LS_ASQL_REST_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_ASQL_REST'"
@@ -38,6 +42,10 @@
 		"LS_ASQL_REST1_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'LS_ASQL_REST1'"
+		},
+		"LS_REST_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_REST'"
 		},
 		"LS_ASQL_ASSESSMENT_properties_typeProperties_server": {
 			"type": "string",
@@ -75,6 +83,18 @@
 			"type": "string",
 			"defaultValue": "dhanush"
 		},
+		"LS_ASQL_FINAL_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqlassessmentserver.database.windows.net"
+		},
+		"LS_ASQL_FINAL_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ASQL_ASSESSMENT"
+		},
+		"LS_ASQL_FINAL_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "dhanush"
+		},
 		"LS_ASQL_REST1_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "sqlassessmentserver.database.windows.net"
@@ -84,6 +104,14 @@
 			"defaultValue": "ASQL_ASSESSMENT"
 		},
 		"LS_ASQL_REST1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "dhanush"
+		},
+		"LS_REST_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": " https://jsonplaceholder.typicode.com/users"
+		},
+		"LS_REST_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "dhanush"
 		},
@@ -132,11 +160,17 @@
 					"LS_ASQL_ASSESS_3_password": {
 						"value": "[parameters('LS_ASQL_ASSESS_3_password')]"
 					},
+					"LS_ASQL_FINAL_password": {
+						"value": "[parameters('LS_ASQL_FINAL_password')]"
+					},
 					"LS_ASQL_REST_connectionString": {
 						"value": "[parameters('LS_ASQL_REST_connectionString')]"
 					},
 					"LS_ASQL_REST1_password": {
 						"value": "[parameters('LS_ASQL_REST1_password')]"
+					},
+					"LS_REST_password": {
+						"value": "[parameters('LS_REST_password')]"
 					},
 					"LS_ASQL_ASSESSMENT_properties_typeProperties_server": {
 						"value": "[parameters('LS_ASQL_ASSESSMENT_properties_typeProperties_server')]"
@@ -165,6 +199,15 @@
 					"LS_ASQL_ASSESS_3_properties_typeProperties_userName": {
 						"value": "[parameters('LS_ASQL_ASSESS_3_properties_typeProperties_userName')]"
 					},
+					"LS_ASQL_FINAL_properties_typeProperties_server": {
+						"value": "[parameters('LS_ASQL_FINAL_properties_typeProperties_server')]"
+					},
+					"LS_ASQL_FINAL_properties_typeProperties_database": {
+						"value": "[parameters('LS_ASQL_FINAL_properties_typeProperties_database')]"
+					},
+					"LS_ASQL_FINAL_properties_typeProperties_userName": {
+						"value": "[parameters('LS_ASQL_FINAL_properties_typeProperties_userName')]"
+					},
 					"LS_ASQL_REST1_properties_typeProperties_server": {
 						"value": "[parameters('LS_ASQL_REST1_properties_typeProperties_server')]"
 					},
@@ -173,10 +216,36 @@
 					},
 					"LS_ASQL_REST1_properties_typeProperties_userName": {
 						"value": "[parameters('LS_ASQL_REST1_properties_typeProperties_userName')]"
+					},
+					"LS_REST_properties_typeProperties_url": {
+						"value": "[parameters('LS_REST_properties_typeProperties_url')]"
+					},
+					"LS_REST_properties_typeProperties_userName": {
+						"value": "[parameters('LS_REST_properties_typeProperties_userName')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "assessment-df_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'assessment-df_ArmTemplate_0')]"
+			]
 		}
 	]
 }

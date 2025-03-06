@@ -23,10 +23,16 @@
 		"LS_ASQL_ASSESS_3_password": {
 			"value": ""
 		},
+		"LS_ASQL_FINAL_password": {
+			"value": ""
+		},
 		"LS_ASQL_REST_connectionString": {
 			"value": ""
 		},
 		"LS_ASQL_REST1_password": {
+			"value": ""
+		},
+		"LS_REST_password": {
 			"value": ""
 		},
 		"LS_ASQL_ASSESSMENT_properties_typeProperties_server": {
@@ -56,6 +62,15 @@
 		"LS_ASQL_ASSESS_3_properties_typeProperties_userName": {
 			"value": "dhanush"
 		},
+		"LS_ASQL_FINAL_properties_typeProperties_server": {
+			"value": "sqlassessmentserver.database.windows.net"
+		},
+		"LS_ASQL_FINAL_properties_typeProperties_database": {
+			"value": "ASQL_ASSESSMENT"
+		},
+		"LS_ASQL_FINAL_properties_typeProperties_userName": {
+			"value": "dhanush"
+		},
 		"LS_ASQL_REST1_properties_typeProperties_server": {
 			"value": "sqlassessmentserver.database.windows.net"
 		},
@@ -63,6 +78,12 @@
 			"value": "ASQL_ASSESSMENT"
 		},
 		"LS_ASQL_REST1_properties_typeProperties_userName": {
+			"value": "dhanush"
+		},
+		"LS_REST_properties_typeProperties_url": {
+			"value": " https://jsonplaceholder.typicode.com/users"
+		},
+		"LS_REST_properties_typeProperties_userName": {
 			"value": "dhanush"
 		}
 	}
