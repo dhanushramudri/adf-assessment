@@ -1,0 +1,9 @@
+{
+	"name": "assessment-df",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c682350f-f386-42bc-87a6-ec8cad9731fc",
+		"tenantId": "2800c0a0-70e9-49be-8733-faeaa6aced99"
+	}
+}
