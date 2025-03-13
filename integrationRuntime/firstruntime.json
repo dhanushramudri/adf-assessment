@@ -1,0 +1,6 @@
+{
+	"name": "firstruntime",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
