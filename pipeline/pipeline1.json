@@ -66,6 +66,10 @@
 										"item": {
 											"value": "@item()",
 											"type": "Expression"
+										},
+										"staging": {
+											"value": "@item()",
+											"type": "Expression"
 										}
 									}
 								}

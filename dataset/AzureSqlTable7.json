@@ -1,10 +1,6 @@
 {
 	"name": "AzureSqlTable7",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "LS_ASQL_FINAL",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [],
