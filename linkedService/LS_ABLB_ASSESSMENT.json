@@ -6,7 +6,7 @@
 		"type": "AzureBlobStorage",
 		"typeProperties": {
 			"sasUri": "https://assessmentstorageaccount.blob.core.windows.net/",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4ZmZjYjJlNi1lYzcwLTRiOTgtOGFiMi0wZGNmM2ZmYmNjZTEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5NDJjOTI5MS0yYTMwLTRiY2EtYjQ2OS03NmI2YzJjNjE0MTQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "firstruntime",
