@@ -8,19 +8,13 @@
 		"parameters": {
 			"item": {
 				"type": "String"
-			},
-			"staging": {
-				"type": "Object"
 			}
 		},
 		"annotations": [],
 		"type": "SnowflakeV2Table",
 		"schema": [],
 		"typeProperties": {
-			"schema": {
-				"value": "staging.file",
-				"type": "Expression"
-			},
+			"schema": "STAGING",
 			"table": {
 				"value": "@dataset().item",
 				"type": "Expression"

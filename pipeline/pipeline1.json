@@ -66,10 +66,6 @@
 										"item": {
 											"value": "@item()",
 											"type": "Expression"
-										},
-										"staging": {
-											"value": "@item()",
-											"type": "Expression"
 										}
 									}
 								}
@@ -83,9 +79,10 @@
 			"table_names": {
 				"type": "Array",
 				"defaultValue": [
-					"products",
-					"customers",
-					"transactions"
+					"PRODUCTS",
+					"COUNTRY",
+					"CUSTOMERS",
+					"TRANSACTIONS"
 				]
 			}
 		},
