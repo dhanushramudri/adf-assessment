@@ -1,0 +1,24 @@
+{
+	"name": "SnowflakeTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adf_to_snowflake",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"item": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [],
+		"typeProperties": {
+			"schema": "",
+			"table": {
+				"value": "@dataset().item",
+				"type": "Expression"
+			}
+		}
+	}
+}
