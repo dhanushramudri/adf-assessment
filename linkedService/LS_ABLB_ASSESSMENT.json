@@ -5,8 +5,12 @@
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"connectionString": "DefaultEndpointsProtocol=https;AccountName=assessmentstorageaccount;EndpointSuffix=core.windows.net;",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQENGRDk0MjlFLTczQkYtNDYxQS05QkVBLUFGNDAxRjY1NjEwRV9lMjM5Mjg0My0yY2Y5LTRmNGYtODJlMi1iOTRjMzA3N2MxNDMiDQp9"
+			"sasUri": "https://assessmentstorageaccount.blob.core.windows.net/",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4ZmZjYjJlNi1lYzcwLTRiOTgtOGFiMi0wZGNmM2ZmYmNjZTEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "firstruntime",
+			"type": "IntegrationRuntimeReference"
 		}
 	}
 }
