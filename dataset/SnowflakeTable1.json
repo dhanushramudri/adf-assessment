@@ -14,7 +14,7 @@
 		"type": "SnowflakeV2Table",
 		"schema": [],
 		"typeProperties": {
-			"schema": "STAGING",
+			"schema": "RAW",
 			"table": {
 				"value": "@dataset().item",
 				"type": "Expression"
